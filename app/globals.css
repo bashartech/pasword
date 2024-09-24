@@ -82,3 +82,20 @@ cursor: pointer;
       border: 0;
   }
 }
+@media screen and (max-width:395px) {
+  .main{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+  }
+  .input input {
+      margin-top: 20px;
+      width: 210px;
+      height: 45px;
+      cursor: pointer;
+      border-radius: 5px;
+      border: 0;
+  }
+}
