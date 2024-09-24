@@ -1,27 +1,83 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+  background-color: rgb(30, 55, 72);
+}
+.main{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+.passwordGenerator{
+  font-size: 25px;
+  padding:30px;
+  margin: 25px;
+  
+}
+.passwordGenerator:first-child{
+  color: rgb(246, 244, 244);
+}
+.passwordGenerator span{
+  color: rgb(13, 149, 78);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.input input {
+  margin-top: 20px;
+  width: 500px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 0;
+padding: 8px;
+font-size: 15px;
+}
+.input input::placeholder{
+padding: 10px;
+  font-size: 14px;
+
+}
+button{
+  margin-top: 20px;
+  height: 40px;
+  background-color: rgb(13, 149, 78);
+  border: 0;
+  padding: 10px;
+font-size: 15px;
+color: white;
+cursor: pointer;
+}
+.input i{
+  cursor: pointer;
+}
+@media screen and (max-width:700px) {
+  .input input {
+      margin-top: 20px;
+      width: 350px;
+      height: 45px;
+      cursor: pointer;
+      border-radius: 5px;
+      border: 0;
   }
 }
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@media screen and (max-width:500px) {
+  .main{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+  }
+  .input input {
+      margin-top: 20px;
+      width: 230px;
+      height: 45px;
+      cursor: pointer;
+      border-radius: 5px;
+      border: 0;
   }
 }
