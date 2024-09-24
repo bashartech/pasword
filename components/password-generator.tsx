@@ -3,7 +3,7 @@ import { useState } from 'react';
 import React from 'react'
 
 
-export default function passwordGenerator() {
+export default function PasswordGenerator() {
 
     const [password, setPassword] = useState("")
     const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -12,7 +12,7 @@ export default function passwordGenerator() {
     const specialChar = "§$&?ß#"
     const allCharac = upperCase + lowerCase + specialChar
     
-    const createPassword = () =>{
+    const CreatePassword = () =>{
         let password = ""
         password += numbers[Math.floor(Math.random()* numbers.length )]
         password += upperCase[Math.floor(Math.random()* upperCase.length )]
@@ -24,7 +24,7 @@ export default function passwordGenerator() {
         password += numbers[Math.floor(Math.random()* numbers.length )]
         setPassword(password)
     }
-    const copyPassword = () => {
+    const CopyPassword = () => {
         if(password){
             navigator.clipboard.writeText(password)
             .then(()=>{
@@ -54,11 +54,11 @@ export default function passwordGenerator() {
         <div className="input">
           <input type="text" id="password" placeholder="Password" value={password} />
           <i className="fa-regular fa-copy" 
-        onClick={copyPassword}
+        onClick={CopyPassword}
           ></i>
         </div>
         <button
-          onClick={createPassword}
+          onClick={CreatePassword}
         >
           <i className="fa-solid fa-bolt" ></i> Generate Password
         </button>
