@@ -10,7 +10,6 @@ export default function PasswordGenerator() {
     const lowerCase = "abcdefghijklmnopqrstuvwxyz"
     const numbers = "1234567890"
     const specialChar = "§$&?ß#"
-    const allCharac = upperCase + lowerCase + specialChar
     
     const CreatePassword = () =>{
         let password = ""
